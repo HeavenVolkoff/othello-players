@@ -1,0 +1,3 @@
+# IA Othello players
+
+TODO
