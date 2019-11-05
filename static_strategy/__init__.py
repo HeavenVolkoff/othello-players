@@ -28,7 +28,6 @@ BOARD_STATIC_WEIGHTS = {
 
 class StaticStrategyPlayer:
     def __init__(self, color: Color) -> None:
-        self.depth = 3
         self.color = color
 
     def play(self, board: Board) -> T.Tuple[int, int]:
@@ -57,4 +56,4 @@ class StaticStrategyPlayer:
         return best_move
 
 
-__all__ = ("StaticStrategyPlayer",)
+__all__ = ("StaticStrategyPlayer", "BOARD_STATIC_WEIGHTS")
