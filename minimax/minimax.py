@@ -246,8 +246,7 @@ class MiniMaxPlayer:
         self.color = color
 
     def play(self, board: Board) -> T.Tuple[int, int]:
-        func = self.minimax if self.depth < 2 else self.minimax_multiprocess
-        return func(board, self.color, depth_limit=self.depth).next_move
+        return self.minimax(None, board, self.color, depth_limit=self.depth).next_move
 
 
 __all__ = ("MiniMaxPlayer",)
