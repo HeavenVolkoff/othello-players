@@ -1,4 +1,5 @@
 # Internal
+import math
 import typing as T
 
 # External
@@ -34,7 +35,7 @@ class StaticStrategyPlayer:
         color = self.color
         opp_color = color.opposite()
         best_move = (0, 0)
-        max_evaluation = 0
+        max_evaluation = -math.inf
 
         for move in board.valid_moves(color):
             future_board = board.get_clone().play(move, color)
@@ -53,7 +54,7 @@ class StaticStrategyPlayer:
                 best_move = move
                 max_evaluation = evaluation
 
-            return best_move
+        return best_move
 
 
 __all__ = ("StaticStrategyPlayer",)
