@@ -1,2 +1,2 @@
 # Project
-from .minimax import MiniMaxPlayer
+from .minimax import MinimaxPlayer
